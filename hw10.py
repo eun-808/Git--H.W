@@ -17,7 +17,7 @@ def get_average(s):
         total += n
     return total/len(s)
 
-def show_scores(s): # 리스트 s의 각 요소를 순회하면서 각 요소 n을 출력
+def show_scores(s):
     for n in s:
         print (n, end=' ') 
     print ()
