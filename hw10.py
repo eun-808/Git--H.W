@@ -35,15 +35,11 @@ def load_scores(filename):
 # 주 프로그램부
 filepath = 'score.bin' 
 if os.path.exists(filepath):
-    f = open(filepath, 'r')
-    cnt = ['개인점수: ', '평균: ']
-    while True:
-        str1 = filepath.readline()
-        if str1 == '' :
-            break
-        else:
-            for i in cnt :
-                print(f'{cnt}{str1}')
+    ones_s = load_scores(filepath)
+    avg_s = load_scores(filepath)
+    print('[파일 읽기]\n\n[점수 출력]')
+    print(f'개인점수: {ones_s}')
+    print(f'평균: {avg_s}')
 else :
     print('[점수 입력]')
     scores = input_scores()
